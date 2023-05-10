@@ -1,6 +1,6 @@
 {
-  "key": "jira-hello-addon",
-  "baseUrl": "https://21fa-2a02-2f0d-610b-4a00-1853-2da7-4b71-fb39.ngrok-free.app",
+  "key": "${addon.key}",
+  "baseUrl": "${addon.base-url}",
   "name": "Jira Hello Addon",
   "authentication": {
     "type": "jwt"
