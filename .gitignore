@@ -3,3 +3,4 @@
 .idea
 addon-db.**
 *.iml
+.env
