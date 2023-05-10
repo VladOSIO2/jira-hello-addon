@@ -1,0 +1,6 @@
+spring.jpa.hibernate.ddl-auto: none
+spring.datasource.url: jdbc:hsqldb:file:addon-db # Use a file-based backing store for HSQL
+
+addon:
+  key: jira-hello-addon
+  base-url: https://21fa-2a02-2f0d-610b-4a00-1853-2da7-4b71-fb39.ngrok-free.app

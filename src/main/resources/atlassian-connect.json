@@ -1,0 +1,29 @@
+{
+  "key": "jira-hello-addon",
+  "baseUrl": "https://21fa-2a02-2f0d-610b-4a00-1853-2da7-4b71-fb39.ngrok-free.app",
+  "name": "Jira Hello Addon",
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/installed",
+    "uninstalled": "/uninstalled"
+  },
+  "scopes": [
+    "read",
+    "write",
+    "act_as_user"
+  ],
+  "modules": {
+    "generalPages": [
+      {
+        "key": "hello-world-page-jira",
+        "location": "system.top.navigation.bar",
+        "name": {
+          "value": "Hello World"
+        },
+        "url": "/hello-world"
+      }
+    ]
+  }
+}
