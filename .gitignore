@@ -4,3 +4,7 @@
 addon-db.**
 *.iml
 .env
+
+# Gradle build directories
+.gradle
+/build
