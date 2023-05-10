@@ -1,5 +1,6 @@
 spring.jpa.hibernate.ddl-auto: none
 spring.datasource.url: jdbc:hsqldb:file:addon-db # Use a file-based backing store for HSQL
+spring.config.import: optional:file:.env[.properties]
 
 addon:
   key: jira-hello-addon
