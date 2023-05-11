@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  jira-addon-db:
+    env_file: ./.env
+    image: 'postgres:15'
+    container_name: jira-addon-db
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}

@@ -1,7 +1,28 @@
-spring.jpa.hibernate.ddl-auto: none
-spring.datasource.url: jdbc:hsqldb:file:addon-db # Use a file-based backing store for HSQL
-spring.config.import: optional:file:.env[.properties]
+DB_SCHEMA_NAME: jira_addon_db
+
+spring:
+  config.import: optional:file:.env[.properties]
+  jpa.hibernate.ddl-auto: none
+
+  datasource:
+    url: jdbc:postgresql://localhost:${DB_PORT}/${DB_NAME}?currentSchema=${DB_SCHEMA_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    default-schema: ${DB_SCHEMA_NAME}
+    # change-log: classpath:/db/changelog/db.changelog-master.yaml
+    enabled: true
 
 addon:
   key: jira-hello-addon
   base-url: ${DEPLOYED_APP_URL}
+
+atlassian:
+  connect:
+    uri-encoding: none
+
+logging:
+  level:
+    web: debug

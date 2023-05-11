@@ -23,6 +23,8 @@ dependencies {
     implementation 'com.atlassian.connect:atlassian-connect-spring-boot-starter:3.0.3'
     implementation 'com.atlassian.connect:atlassian-connect-spring-boot-jpa-starter:3.0.3'
     implementation 'org.springframework.boot:spring-boot-devtools'
+
+    runtimeOnly 'org.postgresql:postgresql:42.5.1'
     runtimeOnly 'org.hsqldb:hsqldb:2.5.2'
 }
 
