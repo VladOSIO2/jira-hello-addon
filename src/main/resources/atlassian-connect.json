@@ -24,6 +24,79 @@
         },
         "url": "/hello-world"
       }
+    ],
+    "jiraIssueFields": [
+      {
+        "description": {
+          "value": "field with team"
+        },
+        "type": "single_select",
+        "extractions": [
+          {
+            "path": "category",
+            "type": "text",
+            "name": "categoryName"
+          }
+        ],
+        "name": {
+          "value": "Team"
+        },
+        "key": "team-field"
+      }
+    ],
+    "webItems": [
+      {
+        "location": "jira.issue.tools",
+        "weight": 200,
+        "styleClasses": [
+          "webitem",
+          "system-present-webitem"
+        ],
+        "url": "/my-web-item",
+        "context": "addon",
+        "target": {
+          "type": "page"
+        },
+        "tooltip": {
+          "value": "Example tooltip"
+        },
+        "icon": {
+          "width": 16,
+          "height": 16,
+          "url": "/maps/icon.png"
+        },
+        "name": {
+          "value": "My Web Item"
+        },
+        "key": "web-item-example"
+      }
+    ],
+    "jiraIssueContents": [
+      {
+        "icon": {
+          "width": 0,
+          "height": 0,
+          "url": "/my_icon.svg"
+        },
+        "target": {
+          "type": "web_panel",
+          "url": "/hello-world"
+        },
+        "tooltip": {
+          "value": "Generate test case"
+        },
+        "contentPresentConditions": [
+          {
+            "condition": "user_is_admin",
+            "invert": false
+          }
+        ],
+        "jiraNativeAppsEnabled": false,
+        "name": {
+          "value": "My Issue Content Panel"
+        },
+        "key": "my-issue-content-panel"
+      }
     ]
   }
 }
