@@ -10,3 +10,19 @@ services:
       - POSTGRES_DB=${DB_NAME}
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
+
+  jira-addon-api:
+    env_file: ./.env
+    container_name: jira-addon-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    depends_on:
+      - jira-addon-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://jira-addon-db:${DB_PORT}/${POSTGRES_NAME}
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SERVER_PORT=${APP_PORT}
