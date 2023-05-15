@@ -80,7 +80,7 @@
         },
         "target": {
           "type": "web_panel",
-          "url": "/hello-world"
+          "url": "/generate-test-case"
         },
         "tooltip": {
           "value": "Generate test case"
@@ -93,7 +93,7 @@
         ],
         "jiraNativeAppsEnabled": false,
         "name": {
-          "value": "My Issue Content Panel"
+          "value": "Test Case Generation Form"
         },
         "key": "my-issue-content-panel"
       }
