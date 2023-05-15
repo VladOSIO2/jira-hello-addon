@@ -26,3 +26,21 @@ services:
       - SPRING_DATASOURCE_USERNAME=${DB_USER}
       - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
       - SERVER_PORT=${APP_PORT}
+
+
+  ngrok-server:
+    env_file: ./.env
+    container_name: jira-addon-ngrok-server
+    image: ngrok/ngrok:latest
+    restart: unless-stopped
+    command:
+      - "start"
+      - "--all"
+      - "--authtoken"
+      - ${NGROK_AUTH_TOKEN}
+      - "--config"
+      - "/etc/ngrok.yml"
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml
+    ports:
+      - "4040:4040"
