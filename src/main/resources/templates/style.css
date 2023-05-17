@@ -1,0 +1,25 @@
+.play-icon {
+    height: 24px;
+    width: 24px;
+}
+
+.generate-button {
+    width: 180px;
+    height: 32px;
+
+    border-radius: 3px;
+    background-color: #2151C5;
+    color: #fff;
+
+    font-size: 14px;
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    border: none;
+}
+
+.blue-button {
+    background-color: #2151C5;
+}

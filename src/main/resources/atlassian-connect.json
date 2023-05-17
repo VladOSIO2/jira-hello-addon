@@ -85,7 +85,7 @@
         "tooltip": {
           "value": "Generate test case"
         },
-        "contentPresentConditions": [
+        "conditions": [
           {
             "condition": "user_is_admin",
             "invert": false
